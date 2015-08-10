@@ -1,7 +1,10 @@
 package com.algorithmia.algo;
 
 import com.google.gson.Gson;
+import com.google.gson.JsonPrimitive;
+
 import java.lang.reflect.Type;
+
 import org.apache.commons.codec.binary.Base64;
 
 public final class BodyPart {
@@ -11,7 +14,7 @@ public final class BodyPart {
     protected String filename;// Optional
     protected String data;
     protected ContentType content_type;
-    protected String content_type_str;
+    protected String mime_type;
 
     private final Gson gson = new Gson();
 
@@ -20,7 +23,7 @@ public final class BodyPart {
         filename = null;
         data = "";
         content_type = ContentType.Void;
-        content_type_str = "";
+        mime_type = "";
     }
 
     public String getName() {
@@ -35,20 +38,19 @@ public final class BodyPart {
     public ContentType getContentType() {
         return content_type;
     }
-    public String getContentTypeString() {
-        return content_type_str;
+    public String getMimeType() {
+        return mime_type;
     }
-    public Object getData(Type type) {
+    public Object as(Type type) {
       if(content_type == ContentType.Void) {
           return null;
       } else if(content_type == ContentType.Text) {
-          return data;
+          return gson.fromJson(new JsonPrimitive(data), type);
       } else if(content_type == ContentType.Json) {
           return gson.fromJson(data, type);
       } else if(content_type == ContentType.Binary) {
           return Base64.decodeBase64(data);
       }
-      //FIXME log an error
       return null;
     }
 
