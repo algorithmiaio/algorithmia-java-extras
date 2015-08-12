@@ -43,6 +43,8 @@ public final class BodyPart {
     public String getMimeType() {
         return mime_type;
     }
+
+    @SuppressWarnings("unchecked")
     public <T> T as(TypeToken type_token) throws UnsupportedOperationException {
       Type typ = type_token.getType();
       if(content_type == ContentType.Void) {
