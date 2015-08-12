@@ -8,7 +8,7 @@ version := "1.0.1-SNAPSHOT"
 autoScalaLibrary := false
 
 // More compiler warnings
-scalacOptions ++= Seq("-deprecation", "-unchecked", "-feature", "-Xlint")  // "-verbose"
+scalacOptions ++= Seq("-deprecation", "-unchecked", "-feature", "-Xlint")
 
 // resolvers += "Sonatype OSS Snapshots" at "https://oss.sonatype.org/content/repositories/snapshots"
 
