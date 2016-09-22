@@ -28,6 +28,7 @@ public final class BodyPart {
         mime_type = "";
     }
 
+    public String getData() { return data;}
     public String getName() {
         return name;
     }
