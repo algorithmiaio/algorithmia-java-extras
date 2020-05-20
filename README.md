@@ -1,7 +1,4 @@
 algorithmia-java-extras
 ================
 
-
-# Getting started
-
-**We're in the process of publishing to Maven Central. Check back soon...**
+This repo generates the algorithmia-extras package. This includes extra utilities used by Algorithmia java algorithms, but which don't clearly belong in the java client.

@@ -14,12 +14,12 @@ scalacOptions ++= Seq("-deprecation", "-unchecked", "-feature", "-Xlint")
 
 libraryDependencies ++= Seq(
   "com.algorithmia" % "algorithmia-client" % "1.0.+",
-  "com.google.code.gson" % "gson" % "2.3.1",
-  "org.apache.httpcomponents" % "httpasyncclient" % "4.1",
-  "commons-io" % "commons-io" % "2.4",
-  "commons-codec" % "commons-codec" % "1.10",
-  "com.novocode" % "junit-interface" % "0.8" % "test->default",
-  "junit" % "junit" % "4.12" % "test"
+  "com.google.code.gson" % "gson" % "2.8.6",
+  "org.apache.httpcomponents" % "httpasyncclient" % "4.1.4",
+  "commons-io" % "commons-io" % "2.6",
+  "commons-codec" % "commons-codec" % "1.14",
+  "com.novocode" % "junit-interface" % "0.11" % Test,
+  "junit" % "junit" % "4.13" % Test
 )
 
 // Disable using the Scala version in published artifacts
