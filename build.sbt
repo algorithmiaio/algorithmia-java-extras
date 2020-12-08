@@ -3,7 +3,7 @@ name := "algorithmia-extras"
 
 organization := "com.algorithmia"
 
-version := "1.0.3"
+version := "1.0.4-SNAPSHOT"
 
 autoScalaLibrary := false
 
