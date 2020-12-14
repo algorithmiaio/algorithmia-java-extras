@@ -3,7 +3,7 @@ name := "algorithmia-extras"
 
 organization := "com.algorithmia"
 
-version := "1.0.4-SNAPSHOT"
+version := "1.0.4"
 
 autoScalaLibrary := false
 
@@ -13,7 +13,7 @@ scalacOptions ++= Seq("-deprecation", "-unchecked", "-feature", "-Xlint")
 // resolvers += "Sonatype OSS Snapshots" at "https://oss.sonatype.org/content/repositories/snapshots"
 
 libraryDependencies ++= Seq(
-  "com.algorithmia" % "algorithmia-client" % "1.0.+",
+  "com.algorithmia" % "algorithmia-client" % "[1.0.15,2.0[",
   "com.google.code.gson" % "gson" % "2.8.6",
   "org.apache.httpcomponents" % "httpasyncclient" % "4.1.4",
   "commons-io" % "commons-io" % "2.6",
